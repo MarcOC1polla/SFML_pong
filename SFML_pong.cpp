@@ -20,23 +20,28 @@ int main()
     Paddle player2(width - 50, 300);
     Ball ball(width / 2, height / 2);
 
+//define clock and delta time
     sf::Clock clock;
     sf::Time dt;
+//create timers so the ball cant bounce through barriers
 	float bounceTimer = 0.1f;
 	float hitTimer = 0.1f;
 
     sf::Font font;
 
+//load font
 	if (!font.openFromFile("font/PressStart2P-Regular.ttf"))
 	{
 		std::cerr << "Failed to load font!" << std::endl;
 	}
 
+//set font
     sf::Text HUDfont(font);
 	HUDfont.setCharacterSize(24);
 	HUDfont.setFillColor(sf::Color::White);
     HUDfont.setPosition(sf::Vector2f((width / 2 ) - 55, 20));
 
+//player scores
 	int player1Score = 0;
 	int player2Score = 0;
 	std::stringstream ss;
@@ -124,6 +129,7 @@ int main()
             HUDfont.setString(ss.str());
         }
 
+//clear the window, draw objects
         window.clear();
 		ball.Update(dt);
         window.draw(player1.getShape());
