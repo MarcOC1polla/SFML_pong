@@ -14,6 +14,14 @@ Features
 .Score tracking
 
 Controls
-.Player 1        Player 2
-- W = UP         - O = UP
-- S = DOWN       - L = Down
+
+.Player 1    
+- W = UP  
+- S = DOWN  
+
+.Player 2
+- O = UP
+- L = Down
+
+
+![pong](https://github.com/user-attachments/assets/a1565ad2-b10f-4fc2-8054-35cf0ec74264)
